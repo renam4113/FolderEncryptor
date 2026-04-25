@@ -26,7 +26,7 @@ namespace Infrastructure::CryptoPP{
             ::CryptoPP::AES::DEFAULT_KEYLENGTH,
             iv);
 
-        string encryptedText;
+        string encryptedText = "";
         ::CryptoPP::StringSource source(
             plainText,
             true,
@@ -35,7 +35,27 @@ namespace Infrastructure::CryptoPP{
                 new ::CryptoPP::Base64Encoder(
                     new ::CryptoPP::StringSink(encryptedText),
                     false)));
-
         return encryptedText;
+    }
+
+    string CryptoPPCipher::decrypt(const string& encryptedText){
+        string normalizedKey = _key;
+        normalizedKey.resize(::CryptoPP::AES::DEFAULT_KEYLENGTH, '\0');
+
+        ::CryptoPP::byte iv[::CryptoPP::AES::BLOCKSIZE] = {};
+        ::CryptoPP::CBC_Mode<::CryptoPP::AES>::Decryption decryptor(
+            reinterpret_cast<const ::CryptoPP::byte*>(normalizedKey.data()),
+            ::CryptoPP::AES::DEFAULT_KEYLENGTH,
+            iv);
+
+        string plainText = "";
+         ::CryptoPP::StringSource source(
+            encryptedText,
+            true,
+            new ::CryptoPP::StreamTransformationFilter(
+                decryptor,
+                new ::CryptoPP::Base64Decoder(
+                    new ::CryptoPP::StringSink(plainText))));
+        return plainText;
     }
 }

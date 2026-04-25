@@ -9,8 +9,9 @@ namespace Application::Services::Implementation {
     public:
         FolderEncryptionService(shared_ptr<Application::InfrastructureServices::ICipher> cipher);
         size_t encryptFiles(const filesystem::path& folderPath) override;
+        size_t decryptFiles(const filesystem::path& folderPath) override;
 
     private:
         shared_ptr<Application::InfrastructureServices::ICipher> _cipher;
     };
-}  // namespace Application::Services::Implementation
+}

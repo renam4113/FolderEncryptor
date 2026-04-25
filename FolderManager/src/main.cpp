@@ -24,7 +24,6 @@ int main() {
         } else {
             startPath = std::filesystem::path(inputPath);
         }
-
         std::cout << "Введите секретный ключ (пароль): ";
         std::string secret;
         std::getline(std::cin, secret);
@@ -38,6 +37,5 @@ int main() {
         std::cerr << "Ошибка: " << ex.what() << "\n";
         return 1;
     }
-
     return 0;
 }
