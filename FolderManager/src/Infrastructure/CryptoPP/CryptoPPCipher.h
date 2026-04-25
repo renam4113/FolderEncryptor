@@ -4,16 +4,16 @@
 
 #include "Application/InfrastructureServices/ICipher.h"
 
+using namespace std;
 namespace Infrastructure::CryptoPP {
 
-class CryptoPPCipher final : public Application::InfrastructureServices::ICipher {
+class CryptoPPCipher: public Application::InfrastructureServices::ICipher {
 public:
-    explicit CryptoPPCipher(const std::string& secret);
-
-    std::string encrypt(const std::string& plainText) const override;
+    CryptoPPCipher(const string& secret);
+    string encrypt(const string& plainText) override;
 
 private:
-    std::string key_;
+    string _key;
 };
 
-}  // namespace Infrastructure::CryptoPP
+}

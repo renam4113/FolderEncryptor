@@ -2,13 +2,13 @@
 
 #include <string>
 
-namespace Application::InfrastructureServices {
+using namespace std;
+namespace Application::InfrastructureServices{
 
-class ICipher {
-public:
-    virtual ~ICipher() = default;
+    class ICipher {
+    public:
+        virtual ~ICipher() = default;
 
-    virtual std::string encrypt(const std::string& plainText) const = 0;
-};
-
-}  // namespace Application::InfrastructureServices
+        virtual string encrypt(const string& plainText) = 0;
+    };
+}
