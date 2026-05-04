@@ -1,3 +1,0 @@
-D:/FolderEncryptor/FolderManager/build/CMakeFiles/FolderManager.dir
-D:/FolderEncryptor/FolderManager/build/CMakeFiles/edit_cache.dir
-D:/FolderEncryptor/FolderManager/build/CMakeFiles/rebuild_cache.dir
