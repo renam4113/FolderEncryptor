@@ -1,1 +1,0 @@
- "C:/ProgramData/vcpkg/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcryptopp.a" -lkernel32 -lpthread -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
