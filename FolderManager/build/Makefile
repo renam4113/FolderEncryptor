@@ -153,29 +153,29 @@ src/Application/Services/Implementation/FolderEncryptionService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FolderManager.dir/build.make CMakeFiles/FolderManager.dir/src/Application/Services/Implementation/FolderEncryptionService.cpp.s
 .PHONY : src/Application/Services/Implementation/FolderEncryptionService.cpp.s
 
-src/Infrastructure/CryptoPP/CryptoPPCipher.obj: src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.obj
-.PHONY : src/Infrastructure/CryptoPP/CryptoPPCipher.obj
+src/Infrastructure/CryptoPP/CryptoPPManager.obj: src/Infrastructure/CryptoPP/CryptoPPManager.cpp.obj
+.PHONY : src/Infrastructure/CryptoPP/CryptoPPManager.obj
 
 # target to build an object file
-src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FolderManager.dir/build.make CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.obj
-.PHONY : src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.obj
+src/Infrastructure/CryptoPP/CryptoPPManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FolderManager.dir/build.make CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.obj
+.PHONY : src/Infrastructure/CryptoPP/CryptoPPManager.cpp.obj
 
-src/Infrastructure/CryptoPP/CryptoPPCipher.i: src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.i
-.PHONY : src/Infrastructure/CryptoPP/CryptoPPCipher.i
+src/Infrastructure/CryptoPP/CryptoPPManager.i: src/Infrastructure/CryptoPP/CryptoPPManager.cpp.i
+.PHONY : src/Infrastructure/CryptoPP/CryptoPPManager.i
 
 # target to preprocess a source file
-src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FolderManager.dir/build.make CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.i
-.PHONY : src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.i
+src/Infrastructure/CryptoPP/CryptoPPManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FolderManager.dir/build.make CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.i
+.PHONY : src/Infrastructure/CryptoPP/CryptoPPManager.cpp.i
 
-src/Infrastructure/CryptoPP/CryptoPPCipher.s: src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.s
-.PHONY : src/Infrastructure/CryptoPP/CryptoPPCipher.s
+src/Infrastructure/CryptoPP/CryptoPPManager.s: src/Infrastructure/CryptoPP/CryptoPPManager.cpp.s
+.PHONY : src/Infrastructure/CryptoPP/CryptoPPManager.s
 
 # target to generate assembly for a file
-src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FolderManager.dir/build.make CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.s
-.PHONY : src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.s
+src/Infrastructure/CryptoPP/CryptoPPManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FolderManager.dir/build.make CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.s
+.PHONY : src/Infrastructure/CryptoPP/CryptoPPManager.cpp.s
 
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
@@ -213,9 +213,9 @@ help:
 	@echo "... src/Application/Services/Implementation/FolderEncryptionService.obj"
 	@echo "... src/Application/Services/Implementation/FolderEncryptionService.i"
 	@echo "... src/Application/Services/Implementation/FolderEncryptionService.s"
-	@echo "... src/Infrastructure/CryptoPP/CryptoPPCipher.obj"
-	@echo "... src/Infrastructure/CryptoPP/CryptoPPCipher.i"
-	@echo "... src/Infrastructure/CryptoPP/CryptoPPCipher.s"
+	@echo "... src/Infrastructure/CryptoPP/CryptoPPManager.obj"
+	@echo "... src/Infrastructure/CryptoPP/CryptoPPManager.i"
+	@echo "... src/Infrastructure/CryptoPP/CryptoPPManager.s"
 	@echo "... src/main.obj"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

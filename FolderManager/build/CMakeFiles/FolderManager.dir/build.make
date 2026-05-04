@@ -102,33 +102,33 @@ CMakeFiles/FolderManager.dir/src/Application/Services/Implementation/FolderEncry
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FolderManager.dir/src/Application/Services/Implementation/FolderEncryptionService.cpp.s"
 	C:/Users/renam/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:/FolderEncryptor/FolderManager/src/Application/Services/Implementation/FolderEncryptionService.cpp -o CMakeFiles/FolderManager.dir/src/Application/Services/Implementation/FolderEncryptionService.cpp.s
 
-CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.obj: CMakeFiles/FolderManager.dir/flags.make
-CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.obj: CMakeFiles/FolderManager.dir/includes_CXX.rsp
-CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.obj: D:/FolderEncryptor/FolderManager/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp
-CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.obj: CMakeFiles/FolderManager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:/FolderEncryptor/FolderManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.obj"
-	C:/Users/renam/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.obj -MF CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.obj.d -o CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.obj -c D:/FolderEncryptor/FolderManager/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp
+CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.obj: CMakeFiles/FolderManager.dir/flags.make
+CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.obj: CMakeFiles/FolderManager.dir/includes_CXX.rsp
+CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.obj: D:/FolderEncryptor/FolderManager/src/Infrastructure/CryptoPP/CryptoPPManager.cpp
+CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.obj: CMakeFiles/FolderManager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:/FolderEncryptor/FolderManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.obj"
+	C:/Users/renam/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.obj -MF CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.obj.d -o CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.obj -c D:/FolderEncryptor/FolderManager/src/Infrastructure/CryptoPP/CryptoPPManager.cpp
 
-CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.i"
-	C:/Users/renam/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:/FolderEncryptor/FolderManager/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp > CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.i
+CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.i"
+	C:/Users/renam/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:/FolderEncryptor/FolderManager/src/Infrastructure/CryptoPP/CryptoPPManager.cpp > CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.i
 
-CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.s"
-	C:/Users/renam/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:/FolderEncryptor/FolderManager/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp -o CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.s
+CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.s"
+	C:/Users/renam/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:/FolderEncryptor/FolderManager/src/Infrastructure/CryptoPP/CryptoPPManager.cpp -o CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.s
 
 # Object files for target FolderManager
 FolderManager_OBJECTS = \
 "CMakeFiles/FolderManager.dir/src/main.cpp.obj" \
 "CMakeFiles/FolderManager.dir/src/Application/Services/Implementation/FolderEncryptionService.cpp.obj" \
-"CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.obj"
+"CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.obj"
 
 # External object files for target FolderManager
 FolderManager_EXTERNAL_OBJECTS =
 
 FolderManager.exe: CMakeFiles/FolderManager.dir/src/main.cpp.obj
 FolderManager.exe: CMakeFiles/FolderManager.dir/src/Application/Services/Implementation/FolderEncryptionService.cpp.obj
-FolderManager.exe: CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPCipher.cpp.obj
+FolderManager.exe: CMakeFiles/FolderManager.dir/src/Infrastructure/CryptoPP/CryptoPPManager.cpp.obj
 FolderManager.exe: CMakeFiles/FolderManager.dir/build.make
 FolderManager.exe: C:/ProgramData/vcpkg/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcryptopp.a
 FolderManager.exe: CMakeFiles/FolderManager.dir/linkLibs.rsp

@@ -11,7 +11,7 @@ namespace {
 const filesystem::path kEncryptionMarker = ".foldermanager.encrypted";
 }
 
-    FolderEncryptionService::FolderEncryptionService(shared_ptr<Application::InfrastructureServices::ICipher> cipher) {
+    FolderEncryptionService::FolderEncryptionService(const shared_ptr<Application::InfrastructureServices::ICryptoPPManager> cipher) {
         _cipher = cipher;
     }
 

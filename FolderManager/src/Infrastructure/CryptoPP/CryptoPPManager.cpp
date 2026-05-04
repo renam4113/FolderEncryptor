@@ -1,4 +1,4 @@
-#include "Infrastructure/CryptoPP/CryptoPPCipher.h"
+#include "Infrastructure/CryptoPP/CryptoPPManager.h"
 
 #include <stdexcept>
 
@@ -9,14 +9,14 @@
 
 using namespace std;
 namespace Infrastructure::CryptoPP{
-    CryptoPPCipher::CryptoPPCipher(const string& secret){
+    CryptoPPManager::CryptoPPManager(const string& secret){
         if (secret.empty()) {
             throw std::runtime_error("Ключ шифрования не может быть пустым");
         }
         _key = secret;
     }
 
-    string CryptoPPCipher::encrypt(const string& plainText){
+    string CryptoPPManager::encrypt(const string& plainText){
         string normalizedKey = _key;
         normalizedKey.resize(::CryptoPP::AES::DEFAULT_KEYLENGTH, '\0');
 
@@ -38,7 +38,7 @@ namespace Infrastructure::CryptoPP{
         return encryptedText;
     }
 
-    string CryptoPPCipher::decrypt(const string& encryptedText){
+    string CryptoPPManager::decrypt(const string& encryptedText){
         string normalizedKey = _key;
         normalizedKey.resize(::CryptoPP::AES::DEFAULT_KEYLENGTH, '\0');
 

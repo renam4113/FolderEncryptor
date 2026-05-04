@@ -8,7 +8,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_executable(FolderManager
     src/main.cpp
     src/Application/Services/Implementation/FolderEncryptionService.cpp
-    src/Infrastructure/CryptoPP/CryptoPPCipher.cpp
+    src/Infrastructure/CryptoPP/CryptoPPManager.cpp
 )
 
 target_include_directories(FolderManager PRIVATE

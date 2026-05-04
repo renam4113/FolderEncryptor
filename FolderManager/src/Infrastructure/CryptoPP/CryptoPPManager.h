@@ -2,15 +2,15 @@
 
 #include <string>
 
-#include "Application/InfrastructureServices/ICipher.h"
+#include "Application/InfrastructureServices/ICryptoPPManager.h"
 
 using namespace std;
 namespace Infrastructure::CryptoPP {
 
-class CryptoPPCipher: public Application::InfrastructureServices::ICipher {
+class CryptoPPManager: public Application::InfrastructureServices::ICryptoPPManager {
     
 public:
-    CryptoPPCipher(const string& secret);
+    CryptoPPManager(const string& secret);
     string encrypt(const string& plainText) override;
     string decrypt(const string& encryptedText) override;
 
