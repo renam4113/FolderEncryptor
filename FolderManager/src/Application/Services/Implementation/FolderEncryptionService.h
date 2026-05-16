@@ -1,17 +1,28 @@
 #pragma once
 #include <memory>
+#include <filesystem>
 #include "Application/InfrastructureServices/ICryptoPPManager.h"
 #include "Application/Services/IFolderEnryptionService.h"
 
-using namespace std;
 namespace Application::Services::Implementation {
-    class FolderEncryptionService: public Application::Services::IFolderEnryptionService {
-    public:
-        FolderEncryptionService(const shared_ptr<Application::InfrastructureServices::ICryptoPPManager> cipher);
-        size_t encryptFiles(const filesystem::path& folderPath) override;
-        size_t decryptFiles(const filesystem::path& folderPath) override;
 
-    private:
-        shared_ptr<Application::InfrastructureServices::ICryptoPPManager> _cipher;
-    };
+class FolderEncryptionService : public IFolderEnryptionService {
+public:
+
+    static FolderEncryptionService& GetInstance(
+        std::shared_ptr<Application::InfrastructureServices::ICryptoPPManager> cipher);
+
+    FolderEncryptionService(const FolderEncryptionService&) = delete;
+    FolderEncryptionService& operator=(const FolderEncryptionService&) = delete;
+
+    size_t encryptFiles(const std::filesystem::path& folderPath) override;
+    size_t decryptFiles(const std::filesystem::path& folderPath) override;
+
+private:
+    FolderEncryptionService(
+        std::shared_ptr<Application::InfrastructureServices::ICryptoPPManager> cipher);
+
+    std::shared_ptr<Application::InfrastructureServices::ICryptoPPManager> _cipher;
+};
+
 }
