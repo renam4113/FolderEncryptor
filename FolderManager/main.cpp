@@ -5,8 +5,8 @@
 
 #include <windows.h>
 
-#include "Application/Services/Implementation/FolderEncryptionService.h"
 #include "Infrastructure/CryptoPP/CryptoPPManager.h"
+#include "Application/Services/Implementation/FolderEncryptionService.h"
 
 int main() {
     SetConsoleCP(CP_UTF8);
@@ -29,7 +29,7 @@ int main() {
         std::getline(std::cin, secret);
 
         auto cipher = std::make_shared<Infrastructure::CryptoPP::CryptoPPManager>(secret);
-        Application::Services::Implementation::FolderEncryptionService service(std::move(cipher));
+        auto& service = Application::Services::Implementation::FolderEncryptionService::GetInstance(std::move(cipher));
         const std::size_t encryptedFiles = service.encryptFiles(startPath);
 
         std::cout << "Шифрование завершено. Обработано файлов: " << encryptedFiles << "\n";

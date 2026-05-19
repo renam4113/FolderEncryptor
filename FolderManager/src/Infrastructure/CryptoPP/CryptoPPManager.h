@@ -1,8 +1,9 @@
 #pragma once
 
-#include <string>
-
 #include "Application/InfrastructureServices/ICryptoPPManager.h"
+#include <string>
+#include <cryptopp/aes.h>
+
 
 using namespace std;
 namespace Infrastructure::CryptoPP {
@@ -16,6 +17,9 @@ public:
 
 private:
     string _key;
+    static const size_t SALT_SIZE = 16;               
+    static const size_t KEY_SIZE = 32;                
+    static const size_t IV_SIZE = ::CryptoPP::AES::BLOCKSIZE; 
+    static const unsigned int PBKDF2_ITERATIONS = 100000;    
 };
-
 }

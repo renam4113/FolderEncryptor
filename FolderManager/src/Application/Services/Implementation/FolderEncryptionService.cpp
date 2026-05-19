@@ -3,6 +3,8 @@
 #include <stdexcept>
 #include <fstream>
 #include <filesystem>
+#include <vector>
+#include <utility>
 
 namespace Application::Services::Implementation {
 namespace {
@@ -45,6 +47,7 @@ FolderEncryptionService& FolderEncryptionService::GetInstance(
     }
     return *s_instance;
 }
+
 
 FolderEncryptionService::FolderEncryptionService(
     std::shared_ptr<Application::InfrastructureServices::ICryptoPPManager> cipher)
@@ -238,8 +241,8 @@ size_t FolderEncryptionService::decryptFiles(const std::filesystem::path& folder
         for (const auto& [original, backup] : modifiedFiles) {
             RestoreFromBackup(backup, original);
         }
-        std::error_code cleanupEc;
-        std::filesystem::remove_all(backupDir, cleanupEc);
+        std::error_code ex;
+        std::filesystem::remove_all(backupDir, ex);
         throw;
     }
 }

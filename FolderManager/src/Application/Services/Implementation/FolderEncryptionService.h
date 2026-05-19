@@ -6,23 +6,20 @@
 
 namespace Application::Services::Implementation {
 
-class FolderEncryptionService : public IFolderEnryptionService {
-public:
+    class FolderEncryptionService : public IFolderEnryptionService {
+    public:
+        static FolderEncryptionService& GetInstance(
+            std::shared_ptr<Application::InfrastructureServices::ICryptoPPManager> cipher = nullptr);
 
-    static FolderEncryptionService& GetInstance(
-        std::shared_ptr<Application::InfrastructureServices::ICryptoPPManager> cipher);
+        FolderEncryptionService(const FolderEncryptionService&) = delete;
+        FolderEncryptionService& operator=(const FolderEncryptionService&) = delete;
 
-    FolderEncryptionService(const FolderEncryptionService&) = delete;
-    FolderEncryptionService& operator=(const FolderEncryptionService&) = delete;
+        size_t encryptFiles(const std::filesystem::path& folderPath) override;
+        size_t decryptFiles(const std::filesystem::path& folderPath) override;
 
-    size_t encryptFiles(const std::filesystem::path& folderPath) override;
-    size_t decryptFiles(const std::filesystem::path& folderPath) override;
-
-private:
-    FolderEncryptionService(
-        std::shared_ptr<Application::InfrastructureServices::ICryptoPPManager> cipher);
-
-    std::shared_ptr<Application::InfrastructureServices::ICryptoPPManager> _cipher;
-};
-
+    private:
+        explicit FolderEncryptionService(std::shared_ptr<Application::InfrastructureServices::ICryptoPPManager> cipher);
+        std::shared_ptr<Application::InfrastructureServices::ICryptoPPManager> _cipher;
+        static std::unique_ptr<FolderEncryptionService> s_instance;
+    };
 }
