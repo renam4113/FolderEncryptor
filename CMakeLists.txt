@@ -5,27 +5,19 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_executable(
-    main.cpp
-    Application/FolderEncryptionService.cpp
-    Infrastructure/CryptoPPManager.cpp
+add_executable(FolderManager
+    FolderManager/main.cpp
+    FolderManager/src/Application/Services/Implementation/FolderEncryptionService.cpp 
+    FolderManager/src/Infrastructure/CryptoPP/CryptoPPManager.cpp
 )
 
 target_include_directories(FolderManager PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/FolderManager/src
+    "C:/ProgramData/vcpkg/vcpkg/installed/x64-mingw-dynamic/include"
 )
 
-find_package(cryptopp CONFIG REQUIRED)
 
-if(TARGET cryptopp::cryptopp)
-    target_link_libraries(FolderManager PRIVATE cryptopp::cryptopp)
-elseif(TARGET cryptopp-static)
-    target_link_libraries(FolderManager PRIVATE cryptopp-static)
-elseif(TARGET cryptopp)
-    target_link_libraries(FolderManager PRIVATE cryptopp)
-else()
-    message(FATAL_ERROR
-        "Пакет cryptopp найден, но экспортируемая CMake-цель не распознана. "
-        "Проверьте вывод find_package(cryptopp)."
-    )
-endif()
+target_link_libraries(FolderManager PRIVATE
+    "C:/ProgramData/vcpkg/vcpkg/installed/x64-mingw-dynamic/lib/libcryptopp.a"
+)
